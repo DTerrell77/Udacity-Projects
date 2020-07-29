@@ -1,0 +1,14 @@
+#butn1{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: #0B6AB0;
+    background: #F1C40F;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: none;
+}

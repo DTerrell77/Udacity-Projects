@@ -1,0 +1,197 @@
+@import url("buttons.css");
+
+body{
+    background: whitesmoke;
+    margin: 0px;
+}
+@media(min-width:320px){
+    .container{
+        width: auto;
+        height: 200vh;
+        display: grid; 
+        background: white;
+        grid-template-columns: 550px;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "hd"
+        "ex"
+        "tp"
+        "cp"
+        "mb"
+        "rm"
+        "st"
+        "gp"
+        "ps"
+        "ca"
+        "mo"
+        "fa"
+        "ke";
+    }  
+}
+
+/* Medium Screens */
+@media(min-width: 600px) and (max-width: 1100px){
+    .container{
+        display: grid;
+        width: auto;
+        height: auto;
+        grid-template-columns: 300px 300px 300px;
+        grid-template-rows: 250px 600px;
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd"
+        "ex ex ex ex ex ex ex ex ex"
+        "tp tp tp tp tp tp tp tp tp"
+        "cp cp cp cp mb mb mb mb mb"
+        "rm rm rm rm st st st st st"
+        "gp gp gp gp ps ps ps ps ps"
+        "ca ca ca ca mo mo mo mo mo"
+        "fa fa fa fa ke ke ke ke ke";
+    }
+}
+
+/* Large Screens */
+@media(min-width: 1101px){
+    .container{
+        grid-template-columns: 650px;
+        grid-template-rows: 225px 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd"
+        "ex ex ex ex ex ex ex ex ex"
+        "tp tp tp tp tp tp tp tp tp"
+        "cp cp cp cp mb mb mb mb mb"
+        "rm rm rm rm st st st st st"
+        "gp gp gp gp ps ps ps ps ps"
+        "ca ca ca ca mo mo mo mo mo"
+        "fa fa fa fa ke ke ke ke ke";
+    }
+}
+
+.box{
+    padding: 10px;
+    font-size: 18px;
+    font-family: 'cursive';
+    color: black;
+    background: #ECF0F1;
+    border: 1px solid #aaa;
+}
+#header{
+    padding: 100px;
+    background: #0B6AB0;
+    width: auto;
+    height: auto;
+    grid-area: hd;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    justify-content: center;
+    color: #D0D3D4;
+}
+p{
+    font-size: 18px;
+}
+
+h1{
+    padding: 10px;
+    width: auto;
+    height: auto;
+    font-weight: 1000;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    width: auto;
+    height: auto;
+    font-size: 18px;
+    font-weight: 100;
+    align-items: center;
+    text-indent: 50px;
+}
+
+#experience{
+    width: 100%;
+    height: auto;
+    grid-area: ex;
+    font-size: 36px;
+    font-weight: bold 900;
+}
+
+#tips{
+    width: 100%;
+    height: auto;
+    grid-area: tp;
+    font-size: 36px;
+}
+
+#cpu{
+    width: 100%;
+    height: auto;
+    grid-area: cp;
+    font-size: 36px;
+}
+
+#mobo{
+    width: 100%;
+    height: auto;
+    grid-area: mb;
+    font-size: 36px;
+}
+
+#ram{
+    width: 100%;
+    height: auto;
+    grid-area: rm;
+    font-size: 36px;
+}
+
+#storage{
+    width: 100%;
+    height: auto;
+    grid-area: st;
+    font-size: 36px;
+}
+
+#gpu{
+    width: 100%;
+    height: auto;
+    grid-area: gp;
+    font-size: 36px;
+}
+
+#power{
+    width: 100%;
+    height: auto;
+    grid-area: ps;
+    font-size: 36px;
+}
+
+#case{
+    width: 100%;
+    height: auto;
+    grid-area: ca;
+    font-size: 36px;
+}
+
+#monitor{
+    width: 100%;
+    height: auto;
+    grid-area: mo;
+    font-size: 36px;
+}
+
+#keyboard{
+    width: 100%;
+    height: auto;
+    grid-area: ke;
+    font-size: 36px;
+}
+
+#fans{
+    width: 100%;
+    height: auto;
+    grid-area: fa;
+    font-size: 36px;
+}
