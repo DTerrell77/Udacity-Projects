@@ -1,0 +1,12 @@
+#nav1{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    color: #0B6AB0;
+    background: #F1C40F;
+    position: fixed;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    border: 5px outset #0B6AB0;
+}
