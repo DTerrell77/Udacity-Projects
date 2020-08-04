@@ -10,7 +10,11 @@ body{
         height: 200vh;
         display: grid; 
         background: white;
+<<<<<<< HEAD:Personal Blog Website/Styles/blogHomepage.css
         grid-template-columns: 320px;
+=======
+        grid-template-columns: 550px;
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogHomepage.css
         grid-template-rows: 1fr;
         grid-template-areas:
         "hd"
@@ -29,7 +33,7 @@ body{
         width: auto;
         height: auto;
         grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 225px 1fr 1fr 1fr 650px;
+        grid-template-rows: 250px 600px;
         grid-template-areas:
         "hd hd hd hd hd hd hd hd hd hd"
         "ga ga ga ga ga ga ga ga ga ga"
@@ -43,7 +47,7 @@ body{
 @media(min-width: 1101px){
     .container{
         grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 225px 1fr 1fr 1fr 550px;
+        grid-template-rows: 225px 1fr 1fr 1fr 450px;
         grid-template-areas:
         "hd hd hd hd hd hd hd hd hd hd"
         "ga ga ga ga ga ga ga ga ga ga"
@@ -65,7 +69,8 @@ body{
 #header{
     padding: 100px;
     background: #0B6AB0;
-    width: auto;
+    width: 100%;
+    height: auto;
     grid-area: hd;
     font-size: 36px;
     font-weight: bold;
@@ -75,18 +80,10 @@ body{
     color: #D0D3D4;
     border: 5px outset #0B6AB0;
 }
-
-h1{
-    width: auto;
-    font-weight: 1000;
-    font-size: 36px;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-}
 p{
     padding: 10px;
     width: auto;
+    height: auto;
     font-weight: 1000;
     font-size: 18px;
     text-align: center;
@@ -94,8 +91,20 @@ p{
     align-items: center;
 }
 
-#gaming{
+<<<<<<< HEAD:Personal Blog Website/Styles/blogHomepage.css
+=======
+h2{
     width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 100;
+    align-items: center;
+    text-indent: 50px;
+}
+
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogHomepage.css
+#gaming{
+    width: 100%;
     height: auto;
     grid-area: ga;
     font-size: 36px;
@@ -103,19 +112,22 @@ p{
 }
 
 #multi-media{
-    width: auto;
+    width: 100%;
+    height: auto;
     grid-area: mm;
     font-size: 36px;
 }
 
 #office-work{
-    width: auto;
+    width: 100%;
+    height: auto;
     grid-area: ow;
     font-size: 36px;
 }
 
 #about{
-    width: auto;
+    width: 100%;
+    height: auto;
     display: flex;
     flex-direction: column;
     grid-area: ab;
@@ -124,10 +136,18 @@ p{
     color: whitesmoke;
     border: 5px outset #0B6AB0;
     
+<<<<<<< HEAD:Personal Blog Website/Styles/blogHomepage.css
+=======
+}
+h3{
+    margin: 0px;
+    padding: 20px;
+    font-size: 24px;
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogHomepage.css
 }
 
 #contacts{
-    width: auto;
+    width: 100%;
     display: flex;
     flex-direction: column;
     grid-area: co;

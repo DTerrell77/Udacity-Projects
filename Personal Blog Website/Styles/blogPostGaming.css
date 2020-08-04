@@ -1,4 +1,8 @@
+<<<<<<< HEAD:Personal Blog Website/Styles/blogPostGaming.css
 @import url("nav.css"); @import url("images.css"); @import url("blogHomepage.css");
+=======
+@import url("buttons.css"); @import url("images.css"); @import url("blogHomepage.css");
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogPostGaming.css
 
 body{
     background: #ECF0F1;
@@ -10,7 +14,11 @@ body{
         height: 200vh;
         display: grid; 
         background: #ECF0F1;
-        grid-template-columns: 483px;
+<<<<<<< HEAD:Personal Blog Website/Styles/blogPostGaming.css
+        grid-template-columns: 320px;
+=======
+        grid-template-columns: 550px;
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogPostGaming.css
         grid-template-rows: 1fr;
         grid-template-areas:
         "hd"
@@ -36,7 +44,11 @@ body{
         width: auto;
         height: auto;
         grid-template-columns: 650px;
+<<<<<<< HEAD:Personal Blog Website/Styles/blogPostGaming.css
         grid-template-rows: 225px 1fr 1fr;
+=======
+        grid-template-rows: 225px 1fr 8vw;
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogPostGaming.css
         grid-template-areas:
         "hd hd hd hd hd hd hd hd hd"
         "ex ex ex ex ex ex ex ex ex"
@@ -52,7 +64,7 @@ body{
 /* Large Screens */
 @media(min-width: 1101px){
     .container{
-        grid-template-columns: 550px;
+        grid-template-columns: 650px;
         grid-template-rows: 225px 1fr 1fr;
         grid-template-areas:
         "hd hd hd hd hd hd hd hd hd"
@@ -77,7 +89,7 @@ body{
 #header{
     padding: 100px;
     background: #0B6AB0;
-    width: auto;
+    width: 89%;
     grid-area: hd;
     font-size: 36px;
     font-weight: bold;
@@ -91,8 +103,31 @@ p{
     font-size: 18px;
 }
 
-#experience{
+<<<<<<< HEAD:Personal Blog Website/Styles/blogPostGaming.css
+=======
+h1{
+    padding: 10px;
     width: auto;
+    height: auto;
+    font-weight: 1000;
+    font-size: 18px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    width: auto;
+    height: auto;
+    font-size: 24px;
+    font-weight: 100;
+    align-items: center;
+    text-indent: 50px;
+}
+
+>>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogPostGaming.css
+#experience{
+    width: 100%;
     height: auto;
     grid-area: ex;
     font-size: 36px;
@@ -100,84 +135,85 @@ p{
 }
 
 #tips{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: tp;
     font-size: 36px;
 }
 
 #cpu{
-    width: auto;
+    margin: 0px;
+    width: 100%;
     height: auto;
     grid-area: cp;
     font-size: 36px;
 }
 
 #mobo{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: mb;
     font-size: 36px;
 }
 
 #ram{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: rm;
     font-size: 36px;
 }
 
 #storage{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: st;
     font-size: 36px;
 }
 
 #gpu{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: gp;
     font-size: 36px;
 }
 
 #power{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: ps;
     font-size: 36px;
 }
 
 #case{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: ca;
     font-size: 36px;
 }
 
 #monitor{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: mo;
     font-size: 36px;
 }
 
 #keyboard{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: ke;
     font-size: 36px;
 }
 
 #fans{
-    width: auto;
+    width: 100%;
     height: auto;
     grid-area: fa;
     font-size: 36px;
 }
 
 #links{
-    width: 100%;
+    width: 288%;
     display: flex;
     flex-direction: column;
     background: #F1C40F;
