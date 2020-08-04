@@ -1,9 +1,7 @@
 img{
     padding: 10px;
-    width: 600px;
-    height: 300px;
-    left: 200px;
-    top: 0px;
+    width: 400px;
+    height: 200px;
 }
 #amazon{
     padding: 10px;
@@ -38,4 +36,9 @@ img{
 #case{
     width: 300px;
     height: 200px;
+}
+#profile{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
 }

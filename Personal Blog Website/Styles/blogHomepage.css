@@ -4,17 +4,12 @@ body{
     background: #ECF0F1;
     margin: 0px;
 }
-@media(min-width:320px){
+@media(min-width:375px){
     .container{
-        width: auto;
         height: 200vh;
         display: grid; 
-        background: white;
-<<<<<<< HEAD:Personal Blog Website/Styles/blogHomepage.css
-        grid-template-columns: 320px;
-=======
-        grid-template-columns: 550px;
->>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogHomepage.css
+        background: #ECF0F1;;
+        grid-template-columns: 375px;
         grid-template-rows: 1fr;
         grid-template-areas:
         "hd"
@@ -33,13 +28,13 @@ body{
         width: auto;
         height: auto;
         grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 250px 600px;
+        grid-template-rows: 225px 1fr 1fr 1fr 650px;
         grid-template-areas:
-        "hd hd hd hd hd hd hd hd hd hd"
-        "ga ga ga ga ga ga ga ga ga ga"
-        "mm mm mm mm mm mm mm mm mm mm"
-        "ow ow ow ow ow ow ow ow ow ow"
-        "ab ab ab ab ab co co co co co";
+        "hd hd hd hd hd hd hd hd hd"
+        "ga ga ga ga ga ga ga ga ga"
+        "mm mm mm mm mm mm mm mm mm"
+        "ow ow ow ow ow ow ow ow ow"
+        "ab ab ab ab ab co co co co";
     }
 }
 
@@ -47,17 +42,17 @@ body{
 @media(min-width: 1101px){
     .container{
         grid-template-columns: 300px 300px 300px;
-        grid-template-rows: 225px 1fr 1fr 1fr 450px;
+        grid-template-rows: 225px 1fr 1fr 1fr;
         grid-template-areas:
-        "hd hd hd hd hd hd hd hd hd hd"
-        "ga ga ga ga ga ga ga ga ga ga"
-        "mm mm mm mm mm mm mm mm mm mm"
-        "ow ow ow ow ow ow ow ow ow ow"
-        "ab ab ab ab ab co co co co co";
+        "hd hd hd hd hd hd hd hd hd"
+        "ga ga ga ga ga ga ga ga ga"
+        "mm mm mm mm mm mm mm mm mm"
+        "ow ow ow ow ow ow ow ow ow"
+        "ab ab ab ab ab co co co co";
     }
 }
 
-.box{
+.card{
     padding: 10px;
     font-size: 18px;
     font-family: 'cursive';
@@ -67,10 +62,9 @@ body{
 }
 
 #header{
-    padding: 100px;
+    padding: 75px;
     background: #0B6AB0;
-    width: 100%;
-    height: auto;
+    width: auto;
     grid-area: hd;
     font-size: 36px;
     font-weight: bold;
@@ -80,54 +74,80 @@ body{
     color: #D0D3D4;
     border: 5px outset #0B6AB0;
 }
-p{
-    padding: 10px;
+
+h1{
     width: auto;
-    height: auto;
     font-weight: 1000;
-    font-size: 18px;
+    font-size: 36px;
     text-align: center;
     justify-content: center;
     align-items: center;
 }
 
-<<<<<<< HEAD:Personal Blog Website/Styles/blogHomepage.css
-=======
-h2{
-    width: auto;
-    height: auto;
-    font-size: 24px;
-    font-weight: 100;
+#quote{
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    justify-content: center;
     align-items: center;
-    text-indent: 50px;
+}
+p{
+    padding: 10px;
+    width: auto;
+    font-weight: 500;
+    font-size: 18px;
 }
 
->>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogHomepage.css
 #gaming{
-    width: 100%;
+    width: auto;
     height: auto;
     grid-area: ga;
     font-size: 36px;
     font-weight: bold 900;
 }
 
+#game{
+    padding: 10px;
+    width: auto;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    justify-content: start;
+    align-self: start;
+}
+
 #multi-media{
-    width: 100%;
-    height: auto;
+    width: auto;
     grid-area: mm;
     font-size: 36px;
 }
+#media{
+    padding: 10px;
+    width: auto;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    justify-content: start;
+    align-self: start;
+}
 
 #office-work{
-    width: 100%;
-    height: auto;
+    width: auto;
     grid-area: ow;
     font-size: 36px;
 }
+#office{
+    padding: 10px;
+    width: auto;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    justify-content: start;
+    align-self: start;
+}
 
 #about{
-    width: 100%;
-    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
     grid-area: ab;
@@ -135,19 +155,16 @@ h2{
     background: #F1C40F;
     color: whitesmoke;
     border: 5px outset #0B6AB0;
-    
-<<<<<<< HEAD:Personal Blog Website/Styles/blogHomepage.css
-=======
 }
-h3{
-    margin: 0px;
-    padding: 20px;
-    font-size: 24px;
->>>>>>> b915adfcdcc8ca9205be849f0e1982016ecf19ce:Personal Blog Website/blogHomepage.css
+
+.info{
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
 }
 
 #contacts{
-    width: 100%;
+    width: auto;
     display: flex;
     flex-direction: column;
     grid-area: co;
@@ -155,5 +172,13 @@ h3{
     background: #F1C40F;
     color: whitesmoke;
     border: 5px outset #0B6AB0;
-    
+}
+
+#web{
+    margin: 0px;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: left;
+    justify-content: start;
+    align-self: start;
 }
