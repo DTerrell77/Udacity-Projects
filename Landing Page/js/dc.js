@@ -33,8 +33,6 @@ function sectionActive () {
 // build the navigation 
 
 const navBuild = () => {
-
-    //var where we are going to write the html
     
     let nav = '';
     sections.forEach(section => {
