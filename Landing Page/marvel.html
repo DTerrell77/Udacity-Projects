@@ -8,19 +8,22 @@
     <title>The Marvel Page!</title>
 </head>
 <body>
-    <header id="header">
-        <a href="index.html" class="logo" id="logo"><u>Marvel</u></a>
-        <ul>
-            <li><a href="#home" class="active" onclick="toggle()">Home</a></li>
-            <li><a href="#facts" onclick="toggle()">Facts</a></li>
-            <li><a href="#rankings" onclick="toggle()">Rankings</a></li>
-            <li><a href="#about" onclick="toggle()">About</a></li>
-            <li><a href="#contacts" onclick="toggle()">Contacts</a></li>
-        </ul>
+
+    <i id="button" class="fas fa-chevron-circle-up"></i>
+
+    <header class="header">
+        <nav class="menu">
+          <ul id="navbar" class="active"></ul>
+        </nav>
         <div class="toggle" onclick="toggle()"></div>
-    </header>
-    <section id="home">
-        <div class="home">
+      </header>
+
+    <section id="section6" data-nav="Marvel" class="active-class">
+        <a href="index.html">Marvel</a>        
+    </section>
+    
+    <section id="section1" data-nav="Home" class="your-active-class">
+        <div class="container">
             <h2>Marvel</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
             tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -41,8 +44,8 @@
         <img src="imgs/groupAvengers.png" alt="A picture of all the avengers">
         
     </section>
-    <section id="facts">
-        <div>
+    <section id="section2" data-nav="Facts" class="your-active-class">
+        <div class="container">
             <h2>Facts About the Marvel Franchise</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -62,8 +65,8 @@
         </div>
         <img src="imgs/theAvengers.png" alt="The Avengers">
     </section>
-    <section id="rankings">
-        <div>
+    <section id="section3" data-nav="Rankings" class="your-active-class">
+        <div class="container">
             <h2>Marvel Superhero Rankings</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -83,8 +86,8 @@
         </div>
         <img src="imgs/theAvengers.png" alt="The Avengers">
     </section>
-    <section id="about">
-        <div>
+    <section id="section4" data-nav="About" class="your-active-class">
+        <div class="container">
             <h2>About</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -104,8 +107,8 @@
         </div>
         <img src="imgs/theAvengers.png" alt="The Avengers">
     </section>
-    <section id="contacts">
-        <div>
+    <section id="section5" data-nav="Contacts" class="your-active-class">
+        <div class="container">
             <h2>Contact Us</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 
@@ -134,7 +137,6 @@
             </ul>
         </div>
     </footer>
-    <a href="#" class="scrollToTop"><i class="fas fa-chevron-circle-up"></i></a>
-    <script src="js/app.js"></script>
+    <script src="js/marvel.js"></script>
 </body>
 </html>

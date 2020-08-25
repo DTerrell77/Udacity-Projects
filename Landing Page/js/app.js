@@ -23,8 +23,11 @@ right.addEventListener('mouseleave', () => {
     container.classList.remove('hover-right');
 });
 
-/* toggles a drop down menu for the navigation bar */
-function toggle() {
-    var header = document.getElementById("header")
-    header.classList.toggle('active')
-}
+
+
+
+
+
+
+
+

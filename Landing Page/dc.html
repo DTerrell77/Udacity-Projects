@@ -8,17 +8,20 @@
     <title>The DC Page!</title>
 </head>
 <body>
-    <header id="header">
-        <a href="index.html" class="logo" id="logo"><u>DC</u></a>
-        <ul>
-            <li><a href="#home" class="active" onclick="toggle()">Home</a></li>
-            <li><a href="#facts" onclick="toggle()">Facts</a></li>
-            <li><a href="#rankings" onclick="toggle()">Rankings</a></li>
-            <li><a href="#about" onclick="toggle()">About</a></li>
-            <li><a href="#contacts" onclick="toggle()">Contacts</a></li>
-        </ul>
+
+    <i class="fas fa-chevron-circle-up"></i>
+    
+    <header class="header">
+        <nav class="menu">
+          <ul id="navbar" class="active"></ul>
+        </nav>
         <div class="toggle" onclick="toggle()"></div>
-    </header>
+      </header>
+
+    <section id="section6" data-nav="DC" class="active-class">
+        <a href="index.html">Detective Comics</a>        
+    </section>
+    
     <section id="home">
         <div class="home">
             <h2>Detective Comics</h2>
@@ -134,7 +137,6 @@
             </ul>
         </div>
     </footer>
-    <a href="#" class="scrollToTop"><i class="fas fa-chevron-circle-up"></i></a>
-    <script src="js/app.js"></script>
+    <script src="js/dc.js"></script>
 </body>
 </html>
