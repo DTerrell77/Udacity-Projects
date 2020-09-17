@@ -4,10 +4,9 @@ projectData = {};
 // Express to run server and routes
 const express = require('express');
 
-// Start up an istance of an app
+// Start up an instance of an app
 const app = express();
 
-// Dependencies 
 const bodyParser = require('body-parser');
 
 //Here we are configuring express to use body-parser as middle-ware.
@@ -18,39 +17,38 @@ app.use(bodyParser.json());
 const cors = require('cors');
 app.use(cors());
 
-// Init the main project folder
+// Init the main folder
 app.use(express.static('website'));
 
-const port = 8080;
-
 // Setup Server
+const port = 3000;
+
 const server = app.listen(port, listening());
 
+//Callback function to debug
 function listening() {
     console.log(`Server running on localhost: ${port}`);
 }
 
-// GET route
+// Init GET route with callback function
 app.get('/all', sendData);
 
 function sendData (req, res) {
     res.send(projectData);
-    console.log('GET request is being processed. Sending Project data.');
 }
 
-// POST route
-app.post('/add', callBack);
+// Init POST route 
+app.post('/add', pushData);
 
-function callBack (req, res) {
-    console.log('POST request is being processed. Adding new data to projectData.\n', req.body);
-    if (req.body) {
-        projectData.date = req.body.date;
-        projectData.temp = req.body.temp;
-        projectData.content = req.body.content;
-    }
-    res.send(JSON.stringify(projectData));
-    console.log(
-        `Temperature: ${projectData.temp}, date: ${projectData.date}, content: ${projectData.content}`
-    );
+function pushData(req, res){
+    //Define a variable in order to grab data pulled 
+    //from the website and get the API
+    let data = req.body;
+    console.log(data);
+    projectData['location'] = data.location;
+    projectData['country'] = data.country;
+    projectData['date'] = data.date;
+    projectData['temp'] = data.temp;
+    projectData['content'] = data.content;
+    console.log(projectData);
 }
-

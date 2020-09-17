@@ -1,75 +1,84 @@
 /* Global Variables */
-// HTML elements to get the values
-const userZip = document.getElementById('zip');
-const userFeelings = document.getElementById('feelings');
 
-// HTML elements to update dynamically
+// Create HTML elements to get their values
 const date = document.getElementById('date');
 const temp = document.getElementById('temp');
 const content = document.getElementById('content');
+const zip = document.getElementById('zip');
+const feelings = document.getElementById('feelings');
 
-// HTML element to listen for click events
-const button = document.getElementById('generate');
+// Init OpenWeatherMap API and Personal API Key
+// Init Server
+const baseURL = 'https://api.openweathermap.org/data/2.5/weather';
+const apiKey = 'cb11d2f37c245dcb1f353a65d2d225b6';
+const server = 'http://localhost:3000';
 
-// Personal API Key for OpenWeatherMap API
-const apiKey = '811f9d05ea0e82781380daee49e13798';
-const mainURL = 'https://api.openweathermap.org/data/2.5/weather';
-const server = 'http://localhost:8080';
+// Create an HTML element to listen for any click events
+const butn = document.getElementById('generate');
 
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth()+'.'+ d.getDate()+'.'+ d.getFullYear();
 
-// Event listener to add function to existing HTML DOM element
-button.addEventListener('click', () => {
-    findWeather(mainURL, zip.value, apiKey)
-        .then(temp => {
-            return {date: newDate, temp, content: feelings.value};
-        })
+// Create function for Event listener 
+butn.addEventListener('click', () => {
+    getWeather(baseURL, zip.value, apiKey)
+        
         .then(data => {
             postData('/add', data);
             return data;
         })
+
+        .then(temp => {
+            return {date: newDate, temp, content: feelings.value};
+        })
+        
         .then(({temp, date, content}) => updateUI(temp, date, content))
+        
         .catch(e => {
             console.error(e);
         });
 });
 
-/* Function to GET Web API Data*/
-const findWeather = async (mainURL, userZip, apiKey) => {
+// Update UI
+const updateUI = async (temperature, newDate, feelings) => {
+    date.innerText = newDate;
+    content.innerText = feelings;
+    temp.innerText = `${temperature} deg`;
+};
+
+// Create Function to the GET Web API Data*/
+const getWeather = async (baseURL, zip, apiKey) => {
     try {
-        const req = await fetch(`${mainURL}?zip=${userZip},us&units=metric&APPID=${apiKey}`);
+        const req = await fetch(`${baseURL}?zip=${zip},us&units=metric&APPID=${apiKey}`);
         const results = await req.json();
         const {
             main: {temp},
         } = results;
         return temp;
     } catch (error) {
-        console.log('This is an error: ', error);
+        console.log('error: ', error);
     }
 };
 
-/* Function to POST data */
-const postData = async (path, data) => {
-    console.log(data);
+
+// Create Function to POST data
+const postData = async (url = '', data = {}) => {
     try {
-        await fetch(path, {
-            method: 'POST',
-            credentials : 'same-origin',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-    } catch (error) {
-        console.log('This is an error: ', error);
+    const postRequest = await fetch(url, {
+        method: 'POST',
+        credentials: 'same-origin',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    });
+        console.log('Post');
+        const newData = await postRequest.json();
+        console.log(newData, 'Post');
+        return newData;
     }
-};
-
-// Update UI dynamically
-const updateUI = async (temperature, newDate, feelings) => {
-    date.innerText = newDate;
-    temp.innerText = `${temperature} deg`;
-    content.innerText = feelings;
-};
+    catch(error){
+        console.log('error', error);
+    }
+}
