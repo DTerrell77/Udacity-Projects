@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Test</title>
+        <script type="text/javascript" src="package.js"></script>
+        
+    </head>
+
+    <body>
+
+        <header>
+            <div class="title">
+                Evaluate a news article with Natural Language Processing
+                <a href="https://www.meaningcloud.com/developer/sentiment-analysis" target="_blank"><img src="images/logo.png" alt="meaning cloud logo"></a>
+            </div>
+            
+        </header>
+
+        <main>
+            <section>
+                <form action="http://localhost:8081/test" method="POST" class="" onsubmit="return Client.handleSubmit(event)">
+                    <input id="name" type="text" name="input" value=""  placeholder="Examine a URL">
+                    <input type="submit" name="" value="submit">
+                </form>
+            <section>
+
+                <section>
+                    <p>Results:</p>
+                    <div class="results" id="polarity"></div>
+                    <div class="results" id="subjectivity"></div>
+                </section>
+        </main>
+
+        <footer>
+            <p>Hopefully this works!</p>
+        </footer>
+        <script>
+            // Check that service workers are supported
+            if ('serviceWorker' in navigator) {
+                // Use the window load event to keep the page load performant
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+           </script>
+    </body>
+   
+</html>

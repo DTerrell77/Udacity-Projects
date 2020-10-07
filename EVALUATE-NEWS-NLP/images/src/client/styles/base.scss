@@ -1,0 +1,20 @@
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	background-color: #551AFF;
+}
+
+main {
+	flex: 2;
+}
+
+section {
+	max-width: 1100px;
+	margin: 50px auto;
+}
+
+p {
+	color:#fff;
+}
+
