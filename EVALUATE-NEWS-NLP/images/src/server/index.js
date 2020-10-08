@@ -34,8 +34,8 @@ app.get('/', function (req, res) {
 })
 
 // designates what port the app will listen to for incoming requests
-app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
+app.listen(8081, function () {
+    console.log('Example app listening on port 8081!')
 })
 
 
@@ -51,3 +51,20 @@ app.post('/test', (req, res) => {
     });
 });
 
+ app.post('/test', (req, res) => {
+
+     axios.post("https://api.meaningcloud.com/sentiment-2.1", {
+
+     },
+         {
+             params: {
+                 key: "process.env.API_KEY",
+                 lang: "en",
+                 txt: req.body.mysite
+             }
+         }).then(function (r) {
+
+             res.json(r.data);
+         }).catch(function (e) { console.log(e) })
+
+ });
