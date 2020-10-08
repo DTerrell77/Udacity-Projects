@@ -17,10 +17,6 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
-    prodServer: {
-        host: "localhost",
-        port: "8081"
-    },
     module: {
         rules: [
             {
