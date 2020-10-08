@@ -13,6 +13,10 @@ module.exports = {
         libraryTarget: 'var',
         library: 'Client'
     },
+    devServer: {
+        host: "localhost",
+        port: "8081"
+    },
     module: {
         rules: [
             {
@@ -40,5 +44,5 @@ module.exports = {
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
         })
-    ]
+    ],
 }
