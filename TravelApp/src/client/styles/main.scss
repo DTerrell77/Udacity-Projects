@@ -1,0 +1,255 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.page-blueprint {
+    padding: 2rem 2rem;
+}
+
+.header-box{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 3.5rem;
+    gap: 5rem;
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        background-image: url('../img//logo.png');
+        background-position: center;
+        border-radius: 50%;
+    }
+    .nav-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        list-style: none;
+        color: white;
+        cursor: pointer;
+        .highlight {
+            color: rgb(255, 166, 0);
+        }
+        #voyage-plan,#voyage-record{
+            border-bottom: 5px solid #ffa500;
+            font-size: 32px;
+            font-weight: bold;
+        }
+    }
+}
+
+.voyage-list-box {
+    width: 900px;
+    height:600px;
+    display: none;
+    margin: 3.5rem auto;
+    background-image: url('../img//crab.png');
+    background-repeat: no-repeat;
+    h1 {
+        text-align: center;
+    }
+
+    .voyage-list {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        font-weight: 500;
+        background-color: rgb(235, 235, 235);
+    }
+
+    .voyage-elements {
+        height: 100px;
+        width: 850px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+        font-weight: 300;
+        background-color: rgb(235, 235, 235);
+        p {
+            text-align: center;
+        }
+    }
+}
+
+.page-box {
+    background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.7)), url(../img/island.png);
+    width: 100vw;
+    height: 100vh;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .page-box-voyage-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1.5rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-weight: bold;
+        
+        .form-subject {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 3rem;
+            color: #e67e00;
+        }
+
+        .form-kind {
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            font-size: 32px;
+            font-weight: bold;
+            color: #e67e00;
+            border-bottom: #fff;
+            .input-box{
+                width: 400px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            label {
+                color: white;
+                text-align: center;
+            }
+
+            input {
+                width: 300px;
+                height: 35px;
+                border-radius: 1.5rem;
+                border: 0;
+                outline: none;
+                text-align: left;
+                padding-left: 1rem;
+            }
+        }
+    
+        .submit-butn {
+            padding: 0.7rem 3rem;
+            border-radius: 1.5rem;
+            border: 0;
+            background-color: #e67e00;
+            color: white;
+            outline: none;
+            cursor: pointer;
+            font: inherit;
+            &:hover {
+                background-color: #ffa500;
+            }
+        }
+    }
+}
+
+.red {
+    color: red;
+}
+
+.footer-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+   p {
+        color: white;
+        font-size: 14px;
+        text-align: center;
+   }
+}
+
+@media (min-width: 768px) {
+    
+}
+
+@media (max-width:40rem) {
+    
+    .header-box {
+        
+        margin-left: 1.5rem;
+        gap: 3rem;
+    
+        .nav-box {
+            gap: 3rem;
+        }
+    }
+
+    .page-box {
+        overflow: hidden;
+        .page-box-voyage-form {
+            .form-subject {
+                text-align: center;
+                color: #e67e00;
+                margin-bottom: 3rem;
+            }
+
+            .form-kind {
+                .input-box{
+                    font-size: 1rem;
+                    width: 300px;
+                }
+
+                input {
+                    width: 220px;
+                    height: 35px;
+                    border-radius: 1.5rem;
+                    border: 0;
+                    outline: none;
+                    text-align: left;
+                    padding-left: 1rem;
+                    font-size: 0.7rem;
+                }
+            }
+        
+            .submit-butn {
+                font-size: 0.7rem;
+                transition-duration: 0.4s;
+            }
+
+        }
+    }
+
+    .voyage-list-box {
+        width: 25rem;
+        height: 500px;
+
+        h1 {
+            font-size: 1.2rem;
+        }
+
+        .voyage-list {
+            font-size: 0.7rem;
+        }
+
+        .voyage-elements {
+            width: 25rem;
+            font-size: 0.7rem;
+            p {
+                width: 5rem;
+            }
+        }
+    }
+
+    .footer-box {
+       p {
+            font-size: 9px;
+       }
+    }
+}
