@@ -115,7 +115,6 @@
             font-size: 32px;
             font-weight: bold;
             color: #e67e00;
-            border-bottom: #fff;
             .input-box{
                 width: 400px;
                 display: flex;
@@ -175,20 +174,29 @@
    }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 375px) {
     
 }
 
-@media (max-width:40rem) {
+@media (max-width:760px) {
     
     .header-box {
-        
-        margin-left: 1.5rem;
+        margin-left: 0;
         gap: 3rem;
+        font-size: 16px;
     
         .nav-box {
             gap: 3rem;
+            font-size: 16px;
         }
+
+        .voyage-plan {
+            font-size: 16px;
+        }
+        .voyage-record {
+            font-size: 16px;
+        }
+
     }
 
     .page-box {
@@ -198,9 +206,12 @@
                 text-align: center;
                 color: #e67e00;
                 margin-bottom: 3rem;
+                font-size: 24px;
             }
 
             .form-kind {
+                font-size: 24px;
+
                 .input-box{
                     font-size: 1rem;
                     width: 300px;
@@ -227,7 +238,7 @@
     }
 
     .voyage-list-box {
-        width: 25rem;
+        width: 200px;
         height: 500px;
 
         h1 {
@@ -239,7 +250,7 @@
         }
 
         .voyage-elements {
-            width: 25rem;
+            width: 200px;
             font-size: 0.7rem;
             p {
                 width: 5rem;

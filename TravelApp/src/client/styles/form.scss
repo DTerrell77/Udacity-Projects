@@ -112,7 +112,7 @@
     z-index: 100;
 }
 
-@media (max-width:40rem) {
+@media (max-width:760px) {
 
     .mode-name-box {
         .geolocation-name {
@@ -120,10 +120,14 @@
         }
     }
     .mode {
-        width: 80%;
-        height: 70%;
+        width: 300px;
+        height: 600px;
         .country-box {
             .country-preface {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 .geolocation-date {
                     font-size: 0.7rem;
                 }
@@ -132,8 +136,6 @@
                 }
                 .geolocation-forecast {
                     font-size: 3rem;
-                    position: absolute;
-                    top: 5%;
                 }
                 .geolocation-forecast-condition {
                     font-size: 1rem;
