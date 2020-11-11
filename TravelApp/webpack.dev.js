@@ -23,11 +23,6 @@ module.exports = {
             filename: "index.html",
             chunks: ['home']
         }),
-        new HtmlWebPackPlugin({
-            template: "src/client/views/about.html",
-            filename: "about.html",
-            chunks: ['about']
-        }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
             dry: true,
