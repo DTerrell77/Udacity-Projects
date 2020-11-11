@@ -35,8 +35,6 @@ var closeServer = function() {
     server.close();
 };
 
-closeServer();
-
 module.exports = app;
 
 export {
